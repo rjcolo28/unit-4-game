@@ -1,18 +1,42 @@
+var targetScore
+var wins
+var losses
+var blueCrystal
+var purpleCrystal
+var goldDiamond
+var redRuby
+var playerScore
+var timer
 // variables:
     // targetScore
     // wins
     // losses
-    // crystalButtons
+    // crystals
+        //blueCrystal
+        //purpleCrystal
+        //goldDiamond
+        //redRuby
     // playerScore
     // timer
-// id = "target"
+//get element by id 
+var winsText = document.getElementById("wins-text");
+var lossesText = document.getElementById("losses-text");
+var targetScoreText = document.getElementById("target-score-text");
+var playerScoreText = document.getElementById("player-score-text")
+
+// var targetScore
+var targetScore = 1 + Math.floor(Math.random) * 1000;
     // generate new number afer every round
-// id = "wins"
+// var wins
     // +1 with every player win
-// id = "losses"
+// var losses
     // +1 with every player loss
-// id = "gemOne/Two/Three/Four"
+// var blueCrystal/purpleCrystal/goldDiamond/redRuby
     // generate new value after every round
-// id = "playerScore"
+// var playerScore
     // increase value with every click on gems
-    // reset to zero with win (=== "target") OR reset to zero with loss (> "target")
+    // reset to zero with win (=== "target") OR loss (> "target")
+// var timer
+    // counts down to zero
+    // resets after each round starts again
+// documentText
