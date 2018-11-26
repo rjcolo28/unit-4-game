@@ -1,3 +1,10 @@
+// variables:
+    // targetScore
+    // wins
+    // losses
+    // crystalButtons
+    // playerScore
+    // timer
 // id = "target"
     // generate new number afer every round
 // id = "wins"

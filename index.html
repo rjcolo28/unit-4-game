@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,52 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
 </head>
+
 <body>
     <!-- insert heading: "Gem Master" -->
+    <h1>Gem Master</h1>
     <!-- conent div -->
+    <div class="content">
         <!-- instructions and mechanics -->
-        <!-- random number generator (id = "target") and wins/losses counter (id = "wins", id = "losses") -->
+        <div class="instructions">
+            <p>
+                You're a miner searching for crystals to make ends meet. Your foreman gives you a daily quota to reach.
+                However, the market for crystals is so unpredictable their values change every day.
+            </p>
+            <p>
+                Below are 4 crystals, each with a random value. You must collect the right amount of crystals to reach
+                the quota within the allotted time period.
+                If you don't get enough within the time period, you will lose your pay for the day.
+                HOWEVER, you are also not allowed to take more than your quota.
+            </p>
+            <p>
+                Instructions: Click the crystals below to match your score with the given number within the alloted
+                time period. Your score CANNOT exceed the given score.
+            </p>
+        </div>
+        <!-- random number generator (id = "targetScore") and wins/losses counter (id = "wins", id = "losses") -->
+        <div class = "scoreBox">
+            <p id = "targetScoreText"></p>
+            <p id = "winsText"></p>
+            <p id = "lossesText"></p>
+        </div>
         <!-- "crystals/gems" with random values (id = "gemOne/Two/Three/Four") -->
-        <!-- player's "score" (id = "playerScore") -->
+        <div class = "crystals">
+            <input type="image" src="assets/images/blue_crystal.png" id = "blue"/>
+            <!-- <img src = "assets/images/blue_crystal.png" alt = "blue" style="width:200px;height:200px"> -->
+            <input type="image" src="assets/images/purple_crystal.png" id = "purple"/>
+            <!-- <img src = "assets/images/purple_crystal.png" alt = "purple_gold" style="width:200px;height:200px"> -->
+            <input type="image" src="assets/images/gold_diamond.png" id = "gold"/>
+            <!-- <img src = "assets/images/gold_diamond.png" alt = "diamond" style="width:225px;height:200px"> -->
+            <input type="image" src="assets/images/ruby.png" id = "red"/>
+            <!-- <img src = "assets/images/ruby.png" alt = "ruby" style="width:200px;height:200px"> -->
+        </div>
+        <!-- player's "score" (id = "playerScoreText") -->
+        <div>
+            <p id = "playerScoreText"></p>
+            <p id = "timerText"></p>
+        </div>
+    </div>
 </body>
+
 </html>
