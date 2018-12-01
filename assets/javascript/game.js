@@ -4,92 +4,85 @@ var playerScore = 0;
 var crystals = [];
 var wins = 0;
 var losses = 0;
- 
+var targetScoreText = $("#target-score-text");
+var playerScoreText = $("#player-score-text");
+var winsText = $("#wins-text");
+var lossesText = $("#losses-text");
 
 // FUNCITONS
 $(document).ready(function() {
+    $(targetScoreText).text(targetScore);
+    //Creates values for crystal array
     while (crystals.length < 4) {
-        x = Math.floor(Math.random() * 50) + 1
+        x = Math.floor(Math.random() * 20) + 1
             if (crystals.indexOf(x) === -1) {
                 crystals.push(x);
             }
         }
-    $("#target-score-text").html(`<h2>Target: ` + targetScore);
 
+    //Adds crystal array values to crystal buttons
     $("#blue").attr("value", crystals[0]);
     $("#purple").attr("value", crystals[1]);
     $("#gold").attr("value", crystals[2]);
     $("#ruby").attr("value", crystals[3]);
 
+    //Click functions of each crystal connected to player score
     $("#blue").on("click", function() {
         playerScore += parseInt(this.value);
-        $("#player-score-text").html(`<h2>Player Score: ` + playerScore)
-        console.log(playerScore)
+        $(playerScoreText).text(playerScore);
+        check();
     });
     $("#purple").on("click", function() {
         playerScore += parseInt(this.value);
-        $("#player-score-text").html(`<h2>Player Score: ` + playerScore)
-        console.log(playerScore)
+        $(playerScoreText).text(playerScore);
+        check();
     });
     $("#gold").on("click", function() {
         playerScore += parseInt(this.value);
-        $("#player-score-text").html(`<h2>Player Score: ` + playerScore)
-        console.log(playerScore)
+        $(playerScoreText).text(playerScore);
+        check();
     });
     $("#ruby").on("click", function() {
         playerScore += parseInt(this.value);
-        $("#player-score-text").html(`<h2>Player Score: ` + playerScore)
-        console.log(playerScore)
+        $(playerScoreText).text(playerScore);
+        check();
     })
-    console.log(crystals, playerScore);
 
-    if (playerScore === targetScore) {
-        wins++;
-
+    //Checks player score against target score
+    function check () {
+        if (playerScore === targetScore) {
+            wins++;
+            $(winsText).text(wins);
+            reset();
+            }
+        else if (playerScore > targetScore) {
+            losses++;
+            $(lossesText).text(losses);
+            reset();
+        }
     }
-    else if (playerScore > targetScore) {
-        losses++;
-        
+
+    // Resets scores and values
+    function reset () {
+        crystals = [];
+        //Resets target score
+        var targetScore = Math.floor(Math.random() * 150) + 75;
+        $(targetScoreText).text(targetScore);
+
+        // //Resets crystal values
+        while (crystals.length < 4) {
+            x = Math.floor(Math.random() * 50) + 1
+                if (crystals.indexOf(x) === -1) {
+                    crystals.push(x);
+                }
+            }
+        $("#blue").attr("value", crystals[0]);
+        $("#purple").attr("value", crystals[1]);
+        $("#gold").attr("value", crystals[2]);
+        $("#ruby").attr("value", crystals[3]);
+
+        //Reset player's score
+        playerScore = 0;
+        $(playerScoreText).text(playerScore);
     }
-
-    $("#wins-text").text("Wins: " + wins);
-    $("#losses-text").text("Losses: " + losses);
-
 })
-
-
-
-
-
-
-
-// get element by id 
-// var winsText = document.getElementById("wins-text");
-// var lossesText = document.getElementById("losses-text");
-// var targetScoreText = document.getElementById("target-score-text");
-// var playerScoreText = document.getElementById("player-score-text");
-
-// var targetScore
-    // generate new number afer every round
-// var wins = +1 with every player win, var losses = +1 with every player loss
-    // if statement playerScore === targetScore,
-        //add one to wins
-    // else playerScore > targetScore,
-        //add one to losses
-// crystals
-    // add value to player score on click
-    // set to new value after game reset
-// var playerScore
-    // increase value with every click on crystal
-// reset button
-// $("#reset").on("click", function() {
-//     playerScore.val(0)
-//     $("#blue") = Math.floor(Math.random() * 50) + 1;
-//     $("#purple") = Math.floor(Math.random() * 50) + 1;
-//     $("diamond") = Math.floor(Math.random() * 50) + 1;
-//     $("ruby") = Math.floor(Math.random() * 50) + 1;
-// })
-    //reset player score to zero
-    //randomize target score
-    //randomize crystal values
-    // documentText

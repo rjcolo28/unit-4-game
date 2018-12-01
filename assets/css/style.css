@@ -1,3 +1,40 @@
+body {
+    background-image: url("../images/lunar-midnight/lunar-midnight.gif")
+}
+
+h1 {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 75px;
+    text-align: center;
+    color: #582BE6;
+}
+
+.content {
+    width: 75%;
+    padding-left: 50px;
+}
+
+h2 {
+    color: #622EA0;
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 45px; 
+}
+
+p {
+    color: #9EF8FB;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.scoreBox {
+    width: 15%;
+    padding-left: 20px;
+}
+
+.crystalBox {
+    background-color: #D5E5FD;
+}
+
 #blue {
     height: 200px;
     width: 200px;

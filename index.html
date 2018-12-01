@@ -7,12 +7,13 @@
     <title>Gem Master</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Montserrat" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 </head>
 
 <body>
     <!-- insert heading: "Gem Master" -->
-    <h1>Gem Master</h1>
+    <h1>King Crystal</h1>
     <!-- conent div -->
     <div class="content">
         <!-- instructions and mechanics -->
@@ -34,12 +35,12 @@
         </div>
         <!-- random number generator (id = "targetScore") and wins/losses counter (id = "wins", id = "losses") -->
         <div class = "scoreBox">
-            <p id = "target-score-text"></p>
-            <p id = "wins-text"></p>
-            <p id = "losses-text"></p>
+            <h2>Target: <span id = "target-score-text"></span></h2>
+            <p>Wins: <span id = "wins-text">0</span></p>
+            <p>Losses <span id = "losses-text">0</span></p>
         </div>
         <!-- "crystals/gems" with random values (id = "gemOne/Two/Three/Four") -->
-        <div>
+        <div class="crystalBox">
             <input type="image" src="assets/images/blue_crystal.png" id = "blue" value = "0"/>
             <!-- <img src = "assets/images/blue_crystal.png" alt = "blue" style="width:200px;height:200px"> -->
             <input type="image" src="assets/images/purple_crystal.png" id = "purple" value = "0"/>
@@ -51,8 +52,7 @@
         </div>
         <!-- player's "score" (id = "playerScoreText") -->
         <div>
-            <p id = "player-score-text"></p>
-            <p id = "restart-text"></p>
+            <h2>Player Score: <span id = "player-score-text">0</span> </h2>
         </div>
     </div>
 
