@@ -7,6 +7,7 @@
     <title>Gem Master</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 </head>
 
 <body>
@@ -39,24 +40,23 @@
         </div>
         <!-- "crystals/gems" with random values (id = "gemOne/Two/Three/Four") -->
         <div>
-            <input type="image" src="assets/images/blue_crystal.png" class = "crystal"/>
+            <input type="image" src="assets/images/blue_crystal.png" id = "blue" value = "0"/>
             <!-- <img src = "assets/images/blue_crystal.png" alt = "blue" style="width:200px;height:200px"> -->
-            <input type="image" src="assets/images/purple_crystal.png" class = "crystal"/>
+            <input type="image" src="assets/images/purple_crystal.png" id = "purple" value = "0"/>
             <!-- <img src = "assets/images/purple_crystal.png" alt = "purple_gold" style="width:200px;height:200px"> -->
-            <input type="image" src="assets/images/gold_diamond.png" class = "crystal"/>
+            <input type="image" src="assets/images/gold_diamond.png" id = "gold" value = "0"/>
             <!-- <img src = "assets/images/gold_diamond.png" alt = "diamond" style="width:225px;height:200px"> -->
-            <input type="image" src="assets/images/ruby.png" class = "crystal"/>
+            <input type="image" src="assets/images/ruby.png" id = "ruby" value = "0"/>
             <!-- <img src = "assets/images/ruby.png" alt = "ruby" style="width:200px;height:200px"> -->
         </div>
         <!-- player's "score" (id = "playerScoreText") -->
         <div>
             <p id = "player-score-text"></p>
-            <button>Play again</button>
+            <p id = "restart-text"></p>
         </div>
     </div>
 
     <script src="assets/javascript/game.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 </body>
 
 </html>
