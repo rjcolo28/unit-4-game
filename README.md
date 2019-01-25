@@ -1,4 +1,4 @@
-Crystal King
+#Crystal King
 
 A number guessing game that creates a random number the player must reach by selecting crystals of randomly generated values.
 
