@@ -64,6 +64,7 @@ $(document).ready(function() {
 
     // Resets scores and values
     function reset () {
+        //Empty crstyals array
         crystals = [];
         //Resets target score
         var targetScore = Math.floor(Math.random() * 150) + 75;
